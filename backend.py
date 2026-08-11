@@ -719,7 +719,7 @@ graph.add_edge("guardrail_blocked", END)
 # =========================
 # PostgreSQL Checkpointer - original persistence kept
 # =========================
-DATABASE_URL = "postgresql://postgres:Kushu%402005@localhost:5432/langgraph_memory"
+DATABASE_URL = "postgresql://postgres:yourpassword@localhost:5432/your_db"
 _conn = psycopg.connect(
     DATABASE_URL,
     autocommit=True,
