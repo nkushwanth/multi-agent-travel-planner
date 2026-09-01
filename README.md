@@ -23,7 +23,26 @@ Features
 - Interactive web UI for sending travel planning prompts
 - Endpoint for drafting travel plans and separate approval endpoint
 - Example MCP server demonstrating domain adapters (weather, checkpoints)
-- Tavily Search MCP and  Aviation stack MCP
+
+
+## State and MCP Integration
+
+This project integrates MCP in several places:
+
+- `Tavily` search uses a remote MCP endpoint at `https://mcp.tavily.com/mcp/`
+- `AviationStack` uses a local stdio MCP command: `uvx aviationstack-mcp`
+- `Weather` is implemented with a custom local MCP server in `custom_weather_mcp_server.py`
+
+The MCP client is defined in `mcp_client.py`, which exposes async helper functions for:
+
+- `tavily_mcp_search`
+- `aviation_mcp_call`
+- `weather_mcp_search`
+- `forecast_mcp_search`
+- `extract_destination`
+
+The main travel workflow in `backend.py` calls these helpers from the flight, hotel, and weather agents.
+
 
 Prerequisites
 - Python 3.10+ (recommended)
