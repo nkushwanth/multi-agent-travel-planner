@@ -16,6 +16,9 @@ Contents
 - `templates/`, `static/`: frontend UI assets (HTML, JS, CSS)
 
 Features
+-✈️ Flight research using AviationStack
+-🏨 Hotel suggestions using Tavily search
+-🌤 Weather lookup via a custom MCP tool
 - Interactive web UI for sending travel planning prompts
 - Endpoint for drafting travel plans and separate approval endpoint
 - Example MCP server demonstrating domain adapters (weather, checkpoints)
